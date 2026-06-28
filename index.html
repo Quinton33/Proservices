@@ -8,17 +8,10 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#07080F;
-  --surface:#111220;
-  --surface2:#181928;
-  --text:#F2F0FF;
-  --muted:#7A7A9A;
-  --accent:#5B6BF8;
-  --accent2:#8B5CF6;
-  --gold:#F59E0B;
-  --green:#10B981;
-  --border:rgba(242,240,255,0.07);
-  --radius:14px;
+  --bg:#07080F;--surface:#111220;--surface2:#181928;
+  --text:#F2F0FF;--muted:#7A7A9A;--accent:#5B6BF8;
+  --accent2:#8B5CF6;--gold:#F59E0B;--green:#10B981;
+  --border:rgba(242,240,255,0.07);--radius:14px;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
@@ -40,142 +33,145 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 5% 4rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:20%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(91,107,248,0.12) 0%,transparent 65%);pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(91,107,248,0.12);border:1px solid rgba(91,107,248,0.25);border-radius:20px;padding:0.35rem 1rem;font-size:0.78rem;color:var(--accent);font-weight:600;letter-spacing:0.05em;margin-bottom:1.75rem}
+.hero::before{content:'';position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(91,107,248,0.12) 0%,transparent 65%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(91,107,248,0.12);border:1px solid rgba(91,107,248,0.25);border-radius:20px;padding:.35rem 1rem;font-size:.78rem;color:var(--accent);font-weight:600;letter-spacing:.05em;margin-bottom:1.75rem}
 .badge-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,6vw,4.75rem);font-weight:800;line-height:1.05;letter-spacing:-0.04em;margin-bottom:1.5rem;max-width:850px}
-.hero h1 .line2{color:var(--accent)}
-.hero h1 .line3{font-style:italic;color:var(--accent2)}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,6vw,4.75rem);font-weight:800;line-height:1.05;letter-spacing:-.04em;margin-bottom:1.5rem;max-width:850px}
+.hero h1 .c2{color:var(--accent)}.hero h1 .c3{font-style:italic;color:var(--accent2)}
 .hero-sub{color:var(--muted);font-size:1rem;max-width:560px;margin:0 auto 2.5rem;line-height:1.8}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:0.9rem 2.25rem;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s;text-decoration:none;display:inline-block}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,107,248,0.35)}
-.btn-secondary{background:none;color:var(--text);border:1px solid var(--border);padding:0.9rem 2.25rem;border-radius:10px;font-size:1rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .25s;text-decoration:none;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:.9rem 2.25rem;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s;text-decoration:none;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,107,248,.35)}
+.btn-secondary{background:none;color:var(--text);border:1px solid var(--border);padding:.9rem 2.25rem;border-radius:10px;font-size:1rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .25s;text-decoration:none;display:inline-block}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
 .hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap}
-.hstat{text-align:center}
-.hstat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--text)}
+.hstat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800}
 .hstat-num span{color:var(--accent)}
-.hstat-lbl{font-size:0.78rem;color:var(--muted);margin-top:.2rem}
+.hstat-lbl{font-size:.78rem;color:var(--muted);margin-top:.2rem}
 
 /* FILTER TABS */
-.filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.filter-btn{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:0.45rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .2s}
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filter-btn{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:.4rem .9rem;border-radius:20px;font-size:.78rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .2s}
 .filter-btn:hover{border-color:var(--accent);color:var(--accent)}
 .filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
-/* SECTION COMMONS */
+/* SECTIONS */
 .section{padding:5rem 5%}
-.sec-eye{font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-.sec-sub{color:var(--muted);font-size:0.9rem;max-width:520px;line-height:1.75}
-.sec-header{margin-bottom:2.5rem}
-
-/* SERVICES */
+.sec-eye{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem}
+.sec-sub{color:var(--muted);font-size:.9rem;max-width:520px;line-height:1.75}
+.sec-header{margin-bottom:2rem}
 .services-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.services-count{font-size:.78rem;color:var(--muted);margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace}
+.services-count span{color:var(--accent);font-weight:600}
+
+/* SERVICE CARDS */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
 .service-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .25s;display:flex;flex-direction:column}
-.service-card:hover{border-color:rgba(91,107,248,0.4);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
-.service-card.hidden{display:none}
-.service-header{padding:1.25rem 1.25rem 0.75rem;border-bottom:1px solid var(--border)}
-.service-icon-row{display:flex;align-items:center;gap:0.65rem;margin-bottom:0.65rem}
-.service-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.service-category{font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
-.service-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;line-height:1.3;margin-bottom:0.4rem}
-.service-desc{font-size:0.82rem;color:var(--muted);line-height:1.65}
-.service-features{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:0.35rem;flex:1}
-.feature-item{display:flex;align-items:flex-start;gap:0.45rem;font-size:0.8rem;color:var(--muted)}
-.feature-item::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
+.service-card:hover{border-color:rgba(91,107,248,.4);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.service-header{padding:1.25rem 1.25rem .75rem;border-bottom:1px solid var(--border)}
+.svc-icon-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.svc-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.svc-cat{font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.svc-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;line-height:1.3;margin-bottom:.4rem}
+.svc-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+.svc-features{padding:.75rem 1.25rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.fi{display:flex;align-items:flex-start;gap:.4rem;font-size:.78rem;color:var(--muted)}
+.fi::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
 
-/* PRICING TIERS */
-.pricing-tiers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border)}
-.tier{padding:0.85rem 0.75rem;border-right:1px solid var(--border);text-align:center}
-.tier:last-child{border-right:none}
-.tier.popular{background:rgba(91,107,248,0.07)}
-.tier-label{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem}
-.tier.popular .tier-label{color:var(--accent)}
-.tier-price{font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:600;color:var(--text);line-height:1}
-.tier-delivery{font-size:0.67rem;color:var(--muted);margin-top:0.2rem}
-.tier-popular-badge{display:inline-block;background:var(--accent);color:#fff;font-size:0.58rem;padding:0.12rem 0.45rem;border-radius:3px;font-weight:700;letter-spacing:0.05em;margin-bottom:0.2rem}
-.service-footer{padding:0.9rem 1.25rem;border-top:1px solid var(--border)}
-.paypal-btn{display:flex;align-items:center;justify-content:center;gap:0.45rem;width:100%;background:linear-gradient(135deg,#0070BA,#003087);color:#fff;border:none;padding:0.7rem;border-radius:8px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none}
-.paypal-btn:hover{background:linear-gradient(135deg,#0085D4,#004099);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,112,186,0.4)}
+/* TIER SELECTOR */
+.tier-selector{padding:.75rem 1.25rem;border-top:1px solid var(--border);background:rgba(255,255,255,.02)}
+.tier-selector-label{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.tier-options{display:flex;gap:.5rem}
+.tier-opt{flex:1;border:1px solid var(--border);border-radius:8px;padding:.55rem .4rem;text-align:center;cursor:pointer;transition:all .2s;background:none;font-family:inherit;position:relative}
+.tier-opt:hover{border-color:var(--accent)}
+.tier-opt.selected{border-color:var(--accent);background:rgba(91,107,248,.1)}
+.tier-opt .t-name{font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.2rem}
+.tier-opt.selected .t-name{color:var(--accent)}
+.tier-opt .t-price{font-family:'JetBrains Mono',monospace;font-size:.95rem;font-weight:600;color:var(--text);display:block;line-height:1}
+.tier-opt .t-del{font-size:.62rem;color:var(--muted);display:block;margin-top:.2rem}
+.popular-badge{position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.55rem;padding:.1rem .4rem;border-radius:3px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+
+/* PAY BUTTON */
+.svc-footer{padding:.9rem 1.25rem;border-top:1px solid var(--border)}
+.selected-summary{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem;font-size:.78rem}
+.sel-pkg{color:var(--muted)}
+.sel-pkg strong{color:var(--text)}
+.sel-price{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;color:var(--gold)}
+.paypal-btn{display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;background:linear-gradient(135deg,#0070BA,#003087);color:#fff;border:none;padding:.7rem;border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none}
+.paypal-btn:hover{background:linear-gradient(135deg,#0085D4,#004099);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,112,186,.4)}
 
 /* PROCESS */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
 .process-step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
-.step-n{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);font-weight:500;margin-bottom:0.65rem;letter-spacing:0.08em}
-.step-icon{font-size:1.6rem;margin-bottom:0.6rem}
-.step-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem}
-.step-desc{font-size:0.8rem;color:var(--muted);line-height:1.65}
+.step-n{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);font-weight:500;margin-bottom:.6rem;letter-spacing:.08em}
+.step-icon{font-size:1.6rem;margin-bottom:.55rem}
+.step-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.3rem}
+.step-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
 
 /* WHY */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
 .why-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
-.why-icon{font-size:1.6rem;margin-bottom:0.65rem}
-.why-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem}
-.why-desc{font-size:0.8rem;color:var(--muted);line-height:1.65}
+.why-icon{font-size:1.6rem;margin-bottom:.6rem}
+.why-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.3rem}
+.why-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
 
 /* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .testi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
-.testi-stars{color:var(--gold);font-size:0.85rem;margin-bottom:0.65rem}
-.testi-text{font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1rem}
-.testi-author{display:flex;align-items:center;gap:0.75rem}
-.testi-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:#fff;flex-shrink:0}
+.testi-stars{color:var(--gold);font-size:.85rem;margin-bottom:.65rem}
+.testi-text{font-size:.82rem;color:var(--muted);line-height:1.75;margin-bottom:1rem}
+.testi-author{display:flex;align-items:center;gap:.7rem}
+.tav{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#fff;flex-shrink:0}
 .tav1{background:linear-gradient(135deg,#5B6BF8,#8B5CF6)}
 .tav2{background:linear-gradient(135deg,#10B981,#3B82F6)}
 .tav3{background:linear-gradient(135deg,#F59E0B,#EF4444)}
 .tav4{background:linear-gradient(135deg,#EC4899,#8B5CF6)}
 .tav5{background:linear-gradient(135deg,#14B8A6,#3B82F6)}
-.testi-name{font-size:0.83rem;font-weight:600}
-.testi-loc{font-size:0.72rem;color:var(--muted)}
+.testi-name{font-size:.82rem;font-weight:600}
+.testi-loc{font-size:.7rem;color:var(--muted)}
 
 /* CONTACT */
 .contact-section{padding:5rem 5%;background:var(--surface);border-top:1px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.contact-form{display:flex;flex-direction:column;gap:0.9rem}
-.form-group{display:flex;flex-direction:column;gap:0.35rem}
-.form-group label{font-size:0.78rem;font-weight:500;color:var(--muted);letter-spacing:0.04em}
-.form-group input,.form-group textarea,.form-group select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:0.7rem 1rem;color:var(--text);font-family:inherit;font-size:0.88rem;outline:none;transition:border .2s;width:100%}
+.contact-form{display:flex;flex-direction:column;gap:.85rem}
+.form-group{display:flex;flex-direction:column;gap:.3rem}
+.form-group label{font-size:.75rem;font-weight:500;color:var(--muted);letter-spacing:.04em}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;color:var(--text);font-family:inherit;font-size:.88rem;outline:none;transition:border .2s;width:100%}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent)}
 .form-group textarea{resize:vertical;min-height:110px}
 .form-group select option{background:var(--surface)}
-.btn-submit{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:0.85rem;border-radius:10px;font-size:0.95rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s;width:100%}
-.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(91,107,248,0.35)}
-.contact-info{display:flex;flex-direction:column;gap:1.25rem}
-.contact-item{display:flex;gap:0.85rem;align-items:flex-start}
-.contact-item-icon{width:40px;height:40px;border-radius:9px;background:rgba(91,107,248,0.12);border:1px solid rgba(91,107,248,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.contact-item-title{font-weight:600;font-size:0.88rem;margin-bottom:0.15rem}
-.contact-item-val{font-size:0.82rem;color:var(--muted)}
-.response-guarantee{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:1.1rem;display:flex;align-items:flex-start;gap:0.75rem;margin-top:1rem}
-.rg-text{font-size:0.8rem;color:var(--muted);line-height:1.55}
-.rg-text strong{color:var(--green)}
+.btn-submit{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:.85rem;border-radius:10px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s;width:100%}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(91,107,248,.35)}
+.contact-info{display:flex;flex-direction:column;gap:1.2rem}
+.ci{display:flex;gap:.85rem;align-items:flex-start}
+.ci-icon{width:40px;height:40px;border-radius:9px;background:rgba(91,107,248,.12);border:1px solid rgba(91,107,248,.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ci-title{font-weight:600;font-size:.88rem;margin-bottom:.15rem}
+.ci-val{font-size:.8rem;color:var(--muted)}
+.guarantee{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.7rem;margin-top:1rem}
+.g-text{font-size:.78rem;color:var(--muted);line-height:1.55}
+.g-text strong{color:var(--green)}
 
 /* CTA */
-.cta-section{padding:5rem 5%;text-align:center;background:linear-gradient(135deg,rgba(91,107,248,0.08),rgba(139,92,246,0.08));border-top:1px solid var(--border)}
-.cta-section h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem}
-.cta-section p{color:var(--muted);font-size:0.95rem;margin-bottom:2rem}
+.cta-section{padding:5rem 5%;text-align:center;background:linear-gradient(135deg,rgba(91,107,248,.08),rgba(139,92,246,.08));border-top:1px solid var(--border)}
+.cta-section h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+.cta-section p{color:var(--muted);font-size:.95rem;margin-bottom:2rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
 /* FOOTER */
 footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text)}
 .footer-logo span{color:var(--accent)}
-.footer-left{color:var(--muted);font-size:0.8rem}
+.footer-left{color:var(--muted);font-size:.8rem}
 .footer-links{display:flex;gap:1.5rem}
-.footer-links a{color:var(--muted);font-size:0.8rem;text-decoration:none;transition:color .2s}
+.footer-links a{color:var(--muted);font-size:.8rem;text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--text)}
 
 /* TOAST */
-.toast{position:fixed;bottom:2rem;right:2rem;background:var(--green);color:#fff;padding:0.875rem 1.5rem;border-radius:10px;font-size:0.875rem;font-weight:500;z-index:999;transform:translateY(100px);opacity:0;transition:all .3s;pointer-events:none}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--green);color:#fff;padding:.875rem 1.5rem;border-radius:10px;font-size:.875rem;font-weight:500;z-index:999;transform:translateY(100px);opacity:0;transition:all .3s;pointer-events:none}
 .toast.show{transform:translateY(0);opacity:1}
 .anchor{scroll-margin-top:80px}
-
-/* COUNT BADGE */
-.services-count{font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace}
-.services-count span{color:var(--accent);font-weight:600}
 
 @media(max-width:900px){
   .nav-links{display:none}
@@ -187,11 +183,8 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   footer{flex-direction:column;text-align:center}
 }
 @media(max-width:600px){
-  .process-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .pricing-tiers{grid-template-columns:1fr}
-  .tier{border-right:none;border-bottom:1px solid var(--border)}
-  .tier:last-child{border-bottom:none}
+  .process-grid,.why-grid{grid-template-columns:1fr}
+  .tier-options{flex-direction:column}
   .hero-stats{gap:1.5rem}
 }
 </style>
@@ -215,10 +208,11 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-badge"><span class="badge-dot"></span> Available for new projects</div>
-  <h1>Expert Digital Services<br><span class="line2">Built to Grow</span><br><span class="line3">Your Business</span></h1>
-  <p class="hero-sub">Web dev, design, video editing, AI, marketing, data entry and more — affordable prices, fast delivery, and secure PayPal payment on every order.</p>
+  <h1>Expert Digital Services<br><span class="c2">Built to Grow</span><br><span class="c3">Your Business</span></h1>
+  <p class="hero-sub">Web dev, design, video, AI, marketing, data entry and more — affordable prices starting from $5, fast delivery, and secure PayPal payment on every order.</p>
   <div class="hero-btns">
     <a href="#services" class="btn-primary">Browse All Services</a>
     <a href="#contact" class="btn-secondary">Get a Custom Quote</a>
@@ -231,86 +225,87 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="section services-section anchor" id="services">
   <div class="sec-header">
     <div class="sec-eye">What I offer</div>
     <h2 class="sec-title">All Services & Pricing</h2>
-    <p class="sec-sub">From simple tasks to complex projects — everything is available at fair, competitive prices. Pay securely via PayPal.</p>
+    <p class="sec-sub">Pick the package that fits your budget. Pay securely via PayPal — satisfaction guaranteed on every order.</p>
   </div>
   <div class="filter-bar" id="filterBar"></div>
   <div class="services-count" id="servicesCount"></div>
   <div class="services-grid" id="servicesGrid"></div>
 </section>
 
+<!-- PROCESS -->
 <section class="section anchor" id="process">
   <div class="sec-header">
     <div class="sec-eye">How it works</div>
     <h2 class="sec-title">Simple, transparent process</h2>
-    <p class="sec-sub">Clear steps, no surprises, and results you can count on.</p>
+    <p class="sec-sub">Clear steps, no surprises, and results you can count on every time.</p>
   </div>
   <div class="process-grid">
     <div class="process-step"><div class="step-n">STEP 01</div><div class="step-icon">💬</div><div class="step-title">Tell me what you need</div><div class="step-desc">Fill the contact form or message me directly. I'll reply within 24 hours with a clear plan and timeline.</div></div>
-    <div class="process-step"><div class="step-n">STEP 02</div><div class="step-icon">📋</div><div class="step-title">Receive a proposal</div><div class="step-desc">You get a detailed scope, fixed price, and estimated delivery. No hidden fees ever.</div></div>
-    <div class="process-step"><div class="step-n">STEP 03</div><div class="step-icon">💳</div><div class="step-title">Pay securely via PayPal</div><div class="step-desc">Choose your package and pay safely. Your money is protected by PayPal's buyer guarantee.</div></div>
-    <div class="process-step"><div class="step-n">STEP 04</div><div class="step-icon">🚀</div><div class="step-title">Receive deliverables</div><div class="step-desc">Work starts immediately. You get updates, revisions if needed, and delivery on or before deadline.</div></div>
+    <div class="process-step"><div class="step-n">STEP 02</div><div class="step-icon">📋</div><div class="step-title">Choose your package</div><div class="step-desc">Pick Basic, Standard or Premium on any service card. Each tier is clearly priced with delivery time shown.</div></div>
+    <div class="process-step"><div class="step-n">STEP 03</div><div class="step-icon">💳</div><div class="step-title">Pay securely via PayPal</div><div class="step-desc">Click Pay via PayPal on any service. Your money is protected by PayPal's buyer guarantee — 100% safe.</div></div>
+    <div class="process-step"><div class="step-n">STEP 04</div><div class="step-icon">🚀</div><div class="step-title">Receive deliverables</div><div class="step-desc">Work starts immediately. You get updates, revisions if needed, and delivery on or before the deadline.</div></div>
   </div>
 </section>
 
+<!-- WHY ME -->
 <section class="section" style="padding-top:0">
   <div class="sec-header">
     <div class="sec-eye">Why choose me</div>
     <h2 class="sec-title">What sets this apart</h2>
   </div>
   <div class="why-grid">
-    <div class="why-card"><div class="why-icon">⚡</div><div class="why-title">Fast delivery</div><div class="why-desc">Most simple tasks done in 24 hours. Complex projects delivered ahead of schedule. Rush delivery available.</div></div>
-    <div class="why-card"><div class="why-icon">💰</div><div class="why-title">Affordable pricing</div><div class="why-desc">Competitive prices for every budget. No overcharging, no hidden fees — just honest rates for quality work.</div></div>
-    <div class="why-card"><div class="why-icon">🔒</div><div class="why-title">Secure payments</div><div class="why-desc">All payments via PayPal — the world's most trusted payment platform. Your money is fully protected.</div></div>
-    <div class="why-card"><div class="why-icon">♾️</div><div class="why-title">Free revisions</div><div class="why-desc">Not happy? I'll revise until you are. Revisions are included in every package at no extra cost.</div></div>
-    <div class="why-card"><div class="why-icon">🤖</div><div class="why-title">AI-powered quality</div><div class="why-desc">Every service uses the latest AI tools — faster output, smarter results, and an edge over traditional methods.</div></div>
+    <div class="why-card"><div class="why-icon">💰</div><div class="why-title">Prices starting from $5</div><div class="why-desc">Honest, competitive pricing for every budget. No overcharging, no hidden fees — just fair rates for quality work.</div></div>
+    <div class="why-card"><div class="why-icon">⚡</div><div class="why-title">Fast delivery</div><div class="why-desc">Simple tasks done in 24 hours. Complex projects delivered ahead of schedule. Rush delivery available on request.</div></div>
+    <div class="why-card"><div class="why-icon">🔒</div><div class="why-title">Secure PayPal payments</div><div class="why-desc">All payments via PayPal — one of the world's most trusted platforms. Your money is fully protected.</div></div>
+    <div class="why-card"><div class="why-icon">♾️</div><div class="why-title">Free revisions</div><div class="why-desc">Not happy? I'll revise until you are. Revisions are always included — no hidden charges, ever.</div></div>
+    <div class="why-card"><div class="why-icon">🤖</div><div class="why-title">AI-powered quality</div><div class="why-desc">Every service uses the latest AI tools for faster output, smarter results, and an edge over traditional methods.</div></div>
     <div class="why-card"><div class="why-icon">🌍</div><div class="why-title">Works worldwide</div><div class="why-desc">Serving clients in the US, UK, India, UAE, Europe and beyond. Flexible hours across all time zones.</div></div>
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section class="section" id="testimonials" style="padding-top:0">
   <div class="sec-header">
     <div class="sec-eye">Client reviews</div>
     <h2 class="sec-title">What clients say</h2>
   </div>
   <div class="testi-grid">
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Got my e-commerce site done in 3 days, clean code, fast loading. Affordable and professional. Will hire again for sure.</p><div class="testi-author"><div class="testi-av tav1">JM</div><div><div class="testi-name">James M.</div><div class="testi-loc">London, UK</div></div></div></div>
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">AI chatbot integration was flawless. Cut our support workload by 70%. Price was way lower than agencies quoted. Incredible value.</p><div class="testi-author"><div class="testi-av tav2">SR</div><div><div class="testi-name">Sarah R.</div><div class="testi-loc">New York, USA</div></div></div></div>
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Best video editor I've worked with. Product promo got 50K views in a week and the price was unbeatable. Fast and professional.</p><div class="testi-author"><div class="testi-av tav3">AK</div><div><div class="testi-name">Amir K.</div><div class="testi-loc">Dubai, UAE</div></div></div></div>
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Had 500 products to enter into my Shopify store. Done perfectly in under 24 hours. Saved me days of work. Very affordable.</p><div class="testi-author"><div class="testi-av tav4">PL</div><div><div class="testi-name">Priya L.</div><div class="testi-loc">Mumbai, India</div></div></div></div>
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Needed a logo fast. Got 3 concepts in 12 hours and the final design was perfect. Super responsive and great value for money.</p><div class="testi-author"><div class="testi-av tav5">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-loc">Manchester, UK</div></div></div></div>
-    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">10 blog posts, fully SEO optimised, delivered in 4 days. They ranked within 2 weeks. The SEO strategy was spot on. Highly recommend.</p><div class="testi-author"><div class="testi-av tav1">MF</div><div><div class="testi-name">Maria F.</div><div class="testi-loc">Toronto, Canada</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Got my e-commerce site done in 3 days at a very affordable price. Clean code, fast loading. Will hire again for sure.</p><div class="testi-author"><div class="tav tav1">JM</div><div><div class="testi-name">James M.</div><div class="testi-loc">London, UK</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">AI chatbot integration was flawless. Cut our support workload by 70%. Price was way lower than agencies quoted.</p><div class="testi-author"><div class="tav tav2">SR</div><div><div class="testi-name">Sarah R.</div><div class="testi-loc">New York, USA</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Best video editor I've worked with. Promo video got 50K views in a week. Incredibly affordable for the quality.</p><div class="testi-author"><div class="tav tav3">AK</div><div><div class="testi-name">Amir K.</div><div class="testi-loc">Dubai, UAE</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">500 products entered into my Shopify store perfectly in under 24 hours. Saved me days of work. Super affordable.</p><div class="testi-author"><div class="tav tav4">PL</div><div><div class="testi-name">Priya L.</div><div class="testi-loc">Mumbai, India</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Needed a logo fast — got 3 concepts in 12 hours and the final design was perfect. Great value for money.</p><div class="testi-author"><div class="tav tav5">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-loc">Manchester, UK</div></div></div></div>
+    <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">10 SEO blog posts delivered in 4 days. They ranked within 2 weeks. Excellent strategy and very competitive price.</p><div class="testi-author"><div class="tav tav1">MF</div><div><div class="testi-name">Maria F.</div><div class="testi-loc">Toronto, Canada</div></div></div></div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact-section anchor" id="contact">
   <div class="contact-grid">
     <div>
       <div class="sec-eye">Get in touch</div>
       <h2 class="sec-title" style="margin-bottom:.5rem">Let's work together</h2>
-      <p class="sec-sub" style="margin-bottom:2rem">Have a project in mind? Fill out the form and I'll get back to you within 24 hours with a proposal.</p>
+      <p class="sec-sub" style="margin-bottom:2rem">Have a project in mind? Fill the form and I'll respond within 24 hours with a proposal.</p>
       <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">📧</div><div><div class="contact-item-title">Email</div><div class="contact-item-val">hello@proservices.com</div></div></div>
-        <div class="contact-item"><div class="contact-item-icon">⏱️</div><div><div class="contact-item-title">Response time</div><div class="contact-item-val">Within 24 hours, usually much faster</div></div></div>
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><div><div class="contact-item-title">Working hours</div><div class="contact-item-val">Mon–Sat, flexible across time zones</div></div></div>
+        <div class="ci"><div class="ci-icon">📧</div><div><div class="ci-title">Email</div><div class="ci-val">hello@proservices.com</div></div></div>
+        <div class="ci"><div class="ci-icon">⏱️</div><div><div class="ci-title">Response time</div><div class="ci-val">Within 24 hours, usually much faster</div></div></div>
+        <div class="ci"><div class="ci-icon">🌐</div><div><div class="ci-title">Working hours</div><div class="ci-val">Mon–Sat, flexible across time zones</div></div></div>
       </div>
-      <div class="response-guarantee">
-        <div style="font-size:1.2rem">✅</div>
-        <div class="rg-text"><strong>Satisfaction guarantee</strong> — if you're not happy with the final delivery, I'll revise it until you are, or refund your payment in full.</div>
+      <div class="guarantee">
+        <div style="font-size:1.1rem">✅</div>
+        <div class="g-text"><strong>Satisfaction guarantee</strong> — if you're not happy with the final delivery, I'll revise until you are or refund your payment in full.</div>
       </div>
     </div>
     <div>
       <div class="contact-form">
         <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Smith"></div>
         <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com"></div>
-        <div class="form-group"><label>Service Needed</label>
-          <select id="contactService">
-            <option value="">Select a service...</option>
-          </select>
-        </div>
+        <div class="form-group"><label>Service Needed</label><select id="contactService"><option value="">Select a service...</option></select></div>
         <div class="form-group"><label>Project Details</label><textarea placeholder="Describe your project, goals, timeline, and any specific requirements..."></textarea></div>
         <button class="btn-submit" onclick="submitForm()">Send Message →</button>
       </div>
@@ -320,7 +315,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
 <section class="cta-section">
   <h2>Ready to get started?</h2>
-  <p>Pick a service, choose a package, and pay securely via PayPal. Work starts within 24 hours.</p>
+  <p>Pick a service, choose Basic, Standard or Premium, and pay securely via PayPal. Work starts within 24 hours.</p>
   <div class="cta-btns">
     <a href="#services" class="btn-primary">Browse All Services</a>
     <a href="#contact" class="btn-secondary">Request Custom Quote</a>
@@ -331,9 +326,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   <div class="footer-logo">Pro<span>Services</span></div>
   <div class="footer-left">© 2026 ProServices. All rights reserved.</div>
   <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
+    <a href="#services">Services</a><a href="#process">Process</a><a href="#contact">Contact</a>
   </div>
 </footer>
 
@@ -341,336 +334,391 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
 <script>
 let currency = 'USD';
-const rates = { USD: 1, GBP: 0.79 };
-const sym = { USD: '$', GBP: '£' };
+const rates = { USD:1, GBP:0.79 };
+const sym = { USD:'$', GBP:'£' };
 let activeFilter = 'All';
 
-function setCurrency(c) {
+// selected tier per card (index)
+const selected = {};
+
+function setCurrency(c){
   currency = c;
   document.getElementById('btn-usd').classList.toggle('active', c==='USD');
   document.getElementById('btn-gbp').classList.toggle('active', c==='GBP');
   renderServices();
 }
+function fmt(p){ return sym[currency] + Math.round(p * rates[currency]); }
 
-function fmt(p) {
-  return sym[currency] + Math.round(p * rates[currency]);
-}
-
+/* ── ALL SERVICES with LOWER prices ── */
 const services = [
-  // ── WEB DEVELOPMENT ──
+  // WEB DEVELOPMENT
   { cat:'Web Development', icon:'🌐', color:'rgba(91,107,248,0.15)',
     title:'Landing Page / One-Page Website',
-    desc:'A fast, mobile-friendly landing page to promote your product, service, or event. Conversion-optimised design with contact form.',
+    desc:'A fast, mobile-friendly landing page to promote your product, service, or event. Conversion-optimised with contact form.',
     features:['Fully responsive design','Contact / lead capture form','SEO meta tags','Fast loading speed','Delivered as HTML or WordPress'],
-    tiers:[{l:'Basic',p:29,d:'1 day'},{l:'Standard',p:59,d:'2 days',pop:true},{l:'Premium',p:99,d:'3 days'}] },
+    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'2 days',pop:true},{l:'Premium',p:65,d:'3 days'}] },
 
   { cat:'Web Development', icon:'🛒', color:'rgba(91,107,248,0.15)',
-    title:'E-Commerce Website (Shopify / WooCommerce)',
-    desc:'Full online store setup with products, payment gateway, and shipping settings. Ready to start selling immediately.',
+    title:'E-Commerce Store (Shopify/WooCommerce)',
+    desc:'Full online store setup with products, payment gateway, and shipping. Ready to sell immediately.',
     features:['Product listing & setup','Payment gateway integration','Mobile-optimised storefront','SEO-ready structure','Order management setup'],
-    tiers:[{l:'Basic',p:99,d:'3 days'},{l:'Standard',p:199,d:'5 days',pop:true},{l:'Premium',p:399,d:'10 days'}] },
+    tiers:[{l:'Basic',p:35,d:'2 days'},{l:'Standard',p:75,d:'5 days',pop:true},{l:'Premium',p:149,d:'10 days'}] },
 
   { cat:'Web Development', icon:'⚡', color:'rgba(91,107,248,0.15)',
-    title:'Full-Stack Web App (React / Node)',
-    desc:'Custom web applications built with modern frameworks. Dashboards, SaaS tools, portals, or any web platform you need.',
+    title:'Full-Stack Web App (React/Node)',
+    desc:'Custom web apps — dashboards, SaaS tools, portals — built with modern frameworks and clean code.',
     features:['React / Next.js frontend','Node.js or Python backend','Database design & API','User authentication','Deployment & hosting setup'],
-    tiers:[{l:'Basic',p:199,d:'5 days'},{l:'Standard',p:449,d:'10 days',pop:true},{l:'Premium',p:899,d:'20 days'}] },
+    tiers:[{l:'Basic',p:99,d:'5 days'},{l:'Standard',p:199,d:'10 days',pop:true},{l:'Premium',p:399,d:'20 days'}] },
 
   { cat:'Web Development', icon:'🔧', color:'rgba(91,107,248,0.15)',
     title:'WordPress Website',
     desc:'Professional WordPress site with custom theme, plugins, and all settings configured. Blog, portfolio, or business site.',
-    features:['Custom theme setup','Plugin installation & config','Contact forms & SEO plugin','Speed optimisation','Training on how to manage it'],
-    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'4 days',pop:true},{l:'Premium',p:199,d:'7 days'}] },
+    features:['Custom theme setup','Plugin installation & config','Contact forms & SEO plugin','Speed optimisation','Training on how to manage'],
+    tiers:[{l:'Basic',p:20,d:'1 day'},{l:'Standard',p:45,d:'3 days',pop:true},{l:'Premium',p:89,d:'6 days'}] },
 
   { cat:'Web Development', icon:'🐛', color:'rgba(91,107,248,0.15)',
     title:'Website Bug Fixing & Updates',
-    desc:'Fix broken layouts, errors, slow load times, or any website issues fast. Works with any platform or tech stack.',
-    features:['Fix HTML/CSS/JS bugs','Speed & performance fixes','Mobile responsiveness fixes','Cross-browser compatibility','Detailed fix report'],
-    tiers:[{l:'Basic',p:19,d:'1 day'},{l:'Standard',p:39,d:'1 day',pop:true},{l:'Premium',p:79,d:'2 days'}] },
+    desc:'Fix broken layouts, errors, slow load times, or any website issue fast — any platform or tech stack.',
+    features:['Fix HTML/CSS/JS bugs','Speed & performance fixes','Mobile responsiveness','Cross-browser compatibility','Detailed fix report'],
+    tiers:[{l:'Basic',p:10,d:'1 day'},{l:'Standard',p:20,d:'1 day',pop:true},{l:'Premium',p:39,d:'2 days'}] },
 
-  // ── AI & AUTOMATION ──
+  { cat:'Web Development', icon:'🎨', color:'rgba(91,107,248,0.15)',
+    title:'Website Redesign',
+    desc:'Modernise your existing website with a fresh design, improved UX, and faster performance.',
+    features:['Full visual redesign','Mobile-first layout','Improved page speed','New colour scheme & fonts','SEO meta update'],
+    tiers:[{l:'Basic',p:29,d:'2 days'},{l:'Standard',p:59,d:'4 days',pop:true},{l:'Premium',p:119,d:'8 days'}] },
+
+  // AI & AUTOMATION
   { cat:'AI & Automation', icon:'🤖', color:'rgba(139,92,246,0.15)',
-    title:'AI Chatbot Integration',
-    desc:'Add a smart AI chatbot to your website — powered by ChatGPT or Claude. Handles FAQs, support, and lead capture 24/7.',
-    features:['ChatGPT / Claude API setup','Custom trained on your content','FAQ & support automation','Lead capture integration','Full setup & documentation'],
-    tiers:[{l:'Basic',p:79,d:'2 days'},{l:'Standard',p:179,d:'4 days',pop:true},{l:'Premium',p:349,d:'7 days'}] },
+    title:'AI Chatbot for Your Website',
+    desc:'Smart AI chatbot powered by ChatGPT or Claude. Handles FAQs, support, and lead capture 24/7.',
+    features:['ChatGPT / Claude API setup','Trained on your content','FAQ & support automation','Lead capture integration','Full setup & documentation'],
+    tiers:[{l:'Basic',p:25,d:'1 day'},{l:'Standard',p:59,d:'3 days',pop:true},{l:'Premium',p:119,d:'6 days'}] },
 
   { cat:'AI & Automation', icon:'⚙️', color:'rgba(139,92,246,0.15)',
-    title:'Workflow Automation (Zapier / Make)',
-    desc:'Automate repetitive business tasks with Zapier, Make (Integromat), or n8n. Connect your apps and save hours every week.',
-    features:['Multi-step automation setup','App integrations (100+ apps)','Error handling & monitoring','Testing & documentation','Training on how to manage'],
-    tiers:[{l:'Basic',p:39,d:'1 day'},{l:'Standard',p:99,d:'3 days',pop:true},{l:'Premium',p:199,d:'5 days'}] },
-
-  { cat:'AI & Automation', icon:'🧠', color:'rgba(139,92,246,0.15)',
-    title:'AI Content Generator Tool',
-    desc:'Build a custom AI-powered tool that generates content — blog posts, product descriptions, social captions — in your brand voice.',
-    features:['Custom prompt engineering','Web UI for the tool','Brand voice fine-tuning','Bulk generation support','API integration'],
-    tiers:[{l:'Basic',p:99,d:'3 days'},{l:'Standard',p:249,d:'6 days',pop:true},{l:'Premium',p:499,d:'10 days'}] },
+    title:'Workflow Automation (Zapier/Make)',
+    desc:'Automate repetitive tasks with Zapier, Make, or n8n. Connect your apps and save hours every week.',
+    features:['Multi-step automation setup','100+ app integrations','Error handling & monitoring','Testing & documentation','Training included'],
+    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'2 days',pop:true},{l:'Premium',p:69,d:'4 days'}] },
 
   { cat:'AI & Automation', icon:'📊', color:'rgba(139,92,246,0.15)',
     title:'Python Automation Script',
-    desc:'Custom Python scripts to automate anything — web scraping, file processing, email sending, report generation, and more.',
-    features:['Custom script writing','Web scraping (BeautifulSoup / Selenium)','File & data automation','Email / notification automation','Full source code & comments'],
-    tiers:[{l:'Basic',p:29,d:'1 day'},{l:'Standard',p:79,d:'2 days',pop:true},{l:'Premium',p:149,d:'4 days'}] },
+    desc:'Custom Python scripts — web scraping, file processing, email automation, report generation, and more.',
+    features:['Custom script writing','Web scraping support','File & data automation','Email / notification automation','Full source code & comments'],
+    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'2 days',pop:true},{l:'Premium',p:69,d:'4 days'}] },
 
-  // ── MOBILE APPS ──
+  { cat:'AI & Automation', icon:'🧠', color:'rgba(139,92,246,0.15)',
+    title:'AI Tool / App Building',
+    desc:'Build a custom AI-powered web tool — content generator, classifier, assistant — in your brand voice.',
+    features:['Custom prompt engineering','Simple web UI','Brand voice fine-tuning','Bulk generation support','API integration'],
+    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'5 days',pop:true},{l:'Premium',p:199,d:'9 days'}] },
+
+  // MOBILE APPS
   { cat:'Mobile Apps', icon:'📱', color:'rgba(16,185,129,0.15)',
     title:'React Native Mobile App',
-    desc:'Cross-platform iOS & Android apps with a single codebase. Fast, smooth, and App Store ready.',
-    features:['iOS & Android support','Custom UI/UX design','Push notifications','API & backend integration','App Store submission help'],
-    tiers:[{l:'Basic',p:299,d:'7 days'},{l:'Standard',p:599,d:'14 days',pop:true},{l:'Premium',p:1199,d:'30 days'}] },
+    desc:'Cross-platform iOS & Android apps with one codebase. Fast, smooth, and App Store ready.',
+    features:['iOS & Android from one codebase','Custom UI/UX design','Push notifications & auth','API integration','App Store submission help'],
+    tiers:[{l:'Basic',p:149,d:'7 days'},{l:'Standard',p:299,d:'14 days',pop:true},{l:'Premium',p:599,d:'28 days'}] },
 
   { cat:'Mobile Apps', icon:'🔔', color:'rgba(16,185,129,0.15)',
-    title:'App UI/UX Design (Figma)',
-    desc:'Beautiful, user-tested mobile app designs in Figma. Complete screens, flows, and clickable prototypes.',
+    title:'Mobile App UI Design (Figma)',
+    desc:'Beautiful, user-tested mobile app designs in Figma. Full screens, flows, and clickable prototypes.',
     features:['Full app screen designs','Clickable Figma prototype','User flow diagrams','Developer handoff files','2 rounds of revisions'],
-    tiers:[{l:'Basic',p:59,d:'3 days'},{l:'Standard',p:129,d:'5 days',pop:true},{l:'Premium',p:249,d:'8 days'}] },
+    tiers:[{l:'Basic',p:25,d:'2 days'},{l:'Standard',p:55,d:'4 days',pop:true},{l:'Premium',p:99,d:'7 days'}] },
 
-  // ── DESIGN ──
-  { cat:'Design', icon:'🎨', color:'rgba(245,158,11,0.15)',
+  // DESIGN
+  { cat:'Design', icon:'✏️', color:'rgba(245,158,11,0.15)',
     title:'Logo Design',
-    desc:'Professional, unique logo designed from scratch. Multiple concepts, unlimited revisions, and all file formats included.',
+    desc:'Professional unique logo designed from scratch. Multiple concepts, all file formats, unlimited revisions.',
     features:['3 initial concepts','Unlimited revisions','PNG, SVG, PDF files','Black & white versions','Social media ready sizes'],
-    tiers:[{l:'Basic',p:19,d:'1 day'},{l:'Standard',p:39,d:'2 days',pop:true},{l:'Premium',p:79,d:'3 days'}] },
+    tiers:[{l:'Basic',p:8,d:'1 day'},{l:'Standard',p:18,d:'1 day',pop:true},{l:'Premium',p:35,d:'2 days'}] },
 
   { cat:'Design', icon:'🏢', color:'rgba(245,158,11,0.15)',
     title:'Brand Identity Kit',
-    desc:'Complete brand identity — logo, colours, typography, and brand guidelines. Everything you need to look professional.',
+    desc:'Complete brand identity — logo, colours, typography, and brand guidelines. Everything to look professional.',
     features:['Logo + icon variants','Colour palette & typography','Brand style guide PDF','Business card design','Social media profile set'],
-    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'4 days',pop:true},{l:'Premium',p:199,d:'7 days'}] },
+    tiers:[{l:'Basic',p:20,d:'2 days'},{l:'Standard',p:45,d:'3 days',pop:true},{l:'Premium',p:89,d:'5 days'}] },
 
   { cat:'Design', icon:'📸', color:'rgba(245,158,11,0.15)',
     title:'Social Media Graphics',
-    desc:'Scroll-stopping posts, stories, banners, and cover images for Instagram, Facebook, LinkedIn, Twitter, and more.',
-    features:['Custom branded templates','Instagram / Facebook / LinkedIn sizes','Stories & Reels covers','Editable Canva or Figma files','10 posts per Standard package'],
-    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'2 days',pop:true},{l:'Premium',p:69,d:'3 days'}] },
+    desc:'Scroll-stopping posts, stories, banners for Instagram, Facebook, LinkedIn, and Twitter.',
+    features:['Custom branded templates','All platform sizes','Stories & Reels covers','Editable Canva / Figma files','10 posts per Standard'],
+    tiers:[{l:'Basic',p:7,d:'1 day'},{l:'Standard',p:15,d:'1 day',pop:true},{l:'Premium',p:29,d:'2 days'}] },
 
   { cat:'Design', icon:'📄', color:'rgba(245,158,11,0.15)',
     title:'Flyer, Poster & Banner Design',
-    desc:'Eye-catching flyers, posters, event banners, and promotional materials. Print-ready and digital versions included.',
-    features:['Print-ready PDF (300 DPI)','Digital web version','Custom fonts & graphics','Fast 24-hour turnaround','Unlimited revisions'],
-    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'1 day',pop:true},{l:'Premium',p:49,d:'2 days'}] },
+    desc:'Eye-catching flyers, posters, banners for events and promotions. Print-ready and digital versions.',
+    features:['Print-ready PDF (300 DPI)','Digital web version','Custom fonts & graphics','24-hour turnaround','Unlimited revisions'],
+    tiers:[{l:'Basic',p:6,d:'1 day'},{l:'Standard',p:12,d:'1 day',pop:true},{l:'Premium',p:22,d:'1 day'}] },
 
   { cat:'Design', icon:'🖥️', color:'rgba(245,158,11,0.15)',
     title:'UI/UX Web Design (Figma)',
-    desc:'Full website UI design in Figma — desktop and mobile. Clean, modern layouts with developer-ready specs.',
+    desc:'Full website UI design — desktop and mobile — with developer-ready specs and a clickable prototype.',
     features:['Desktop & mobile designs','Clickable prototype','Design system / components','Developer handoff specs','2 rounds of revisions'],
-    tiers:[{l:'Basic',p:79,d:'3 days'},{l:'Standard',p:179,d:'5 days',pop:true},{l:'Premium',p:349,d:'8 days'}] },
+    tiers:[{l:'Basic',p:29,d:'2 days'},{l:'Standard',p:65,d:'4 days',pop:true},{l:'Premium',p:129,d:'7 days'}] },
 
   { cat:'Design', icon:'📦', color:'rgba(245,158,11,0.15)',
     title:'Product Label & Packaging Design',
-    desc:'Professional product labels, box designs, and packaging artwork. Print-ready files for any manufacturer.',
-    features:['Label / box / pouch design','Dieline template setup','Print-ready files (CMYK)','3D mockup preview','Multiple size variants'],
-    tiers:[{l:'Basic',p:29,d:'2 days'},{l:'Standard',p:59,d:'3 days',pop:true},{l:'Premium',p:119,d:'5 days'}] },
+    desc:'Professional labels, box designs, and packaging artwork. Print-ready files for any manufacturer.',
+    features:['Label / box / pouch design','Dieline template setup','Print-ready CMYK files','3D mockup preview','Multiple size variants'],
+    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'4 days'}] },
 
-  // ── VIDEO & MEDIA ──
+  { cat:'Design', icon:'💼', color:'rgba(245,158,11,0.15)',
+    title:'Presentation / Pitch Deck Design',
+    desc:'Professionally designed PowerPoint or Google Slides decks that impress investors and clients.',
+    features:['Custom slide layouts','Brand colour scheme','Charts & infographics','Up to 10 slides (Standard)','Editable PPT / PPTX file'],
+    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'3 days'}] },
+
+  // VIDEO & MEDIA
   { cat:'Video & Media', icon:'🎬', color:'rgba(239,68,68,0.15)',
     title:'YouTube Video Editing',
-    desc:'Professional YouTube video editing — intros, transitions, colour grading, captions, and thumbnails. Ready to publish.',
-    features:['Colour grading & audio mix','Intro / outro animation','Auto-captions & subtitles','Custom thumbnail design','Up to 15 min per Standard'],
-    tiers:[{l:'Basic',p:19,d:'1 day'},{l:'Standard',p:39,d:'2 days',pop:true},{l:'Premium',p:79,d:'3 days'}] },
+    desc:'Professional YouTube editing — intros, transitions, colour grading, captions, and thumbnails.',
+    features:['Colour grading & audio mix','Intro / outro animation','Auto-captions & subtitles','Custom thumbnail design','Up to 15 min (Standard)'],
+    tiers:[{l:'Basic',p:10,d:'1 day'},{l:'Standard',p:20,d:'2 days',pop:true},{l:'Premium',p:39,d:'3 days'}] },
 
   { cat:'Video & Media', icon:'📲', color:'rgba(239,68,68,0.15)',
     title:'Short-Form Video (Reels / TikTok)',
-    desc:'Viral-ready short videos for Instagram Reels, TikTok, and YouTube Shorts. Trending cuts, captions, and music.',
-    features:['Trendy cuts & transitions','On-screen captions','Background music (licensed)','Up to 60 seconds','3 videos per Standard pack'],
-    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'1 day',pop:true},{l:'Premium',p:69,d:'2 days'}] },
+    desc:'Viral-ready Reels, TikToks, and YouTube Shorts. Trendy cuts, captions, and licensed music.',
+    features:['Trendy cuts & transitions','On-screen captions','Licensed background music','Up to 60 seconds','3 videos per Standard'],
+    tiers:[{l:'Basic',p:7,d:'1 day'},{l:'Standard',p:15,d:'1 day',pop:true},{l:'Premium',p:29,d:'2 days'}] },
 
   { cat:'Video & Media', icon:'🎥', color:'rgba(239,68,68,0.15)',
-    title:'Product / Promo Video',
-    desc:'High-quality promotional videos for your product, app, or service. Motion graphics, voiceover, and cinematic editing.',
-    features:['Motion graphics & animation','Voiceover integration','Stock footage (licensed)','Brand colour grading','Up to 2 min per Standard'],
-    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'4 days',pop:true},{l:'Premium',p:199,d:'7 days'}] },
+    title:'Product / Promo Video Edit',
+    desc:'High-quality promo videos for your product, app, or service. Motion graphics and colour grading.',
+    features:['Motion graphics','Voiceover integration','Licensed stock footage','Brand colour grading','Up to 2 min (Standard)'],
+    tiers:[{l:'Basic',p:20,d:'1 day'},{l:'Standard',p:45,d:'3 days',pop:true},{l:'Premium',p:89,d:'6 days'}] },
 
   { cat:'Video & Media', icon:'🎞️', color:'rgba(239,68,68,0.15)',
     title:'Video Subtitles & Captions',
-    desc:'Accurate subtitles and captions for any video. SRT file, burned-in captions, or styled animated text on screen.',
-    features:['Accurate transcription','SRT / VTT / ASS files','Styled on-screen captions','Multiple languages available','Fast 24-hour delivery'],
-    tiers:[{l:'Basic',p:10,d:'1 day'},{l:'Standard',p:20,d:'1 day',pop:true},{l:'Premium',p:39,d:'1 day'}] },
+    desc:'Accurate subtitles and captions for any video. SRT file or styled on-screen captions.',
+    features:['Accurate transcription','SRT / VTT / ASS files','Styled on-screen captions','Multiple languages','Fast 24-hour delivery'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:10,d:'1 day',pop:true},{l:'Premium',p:19,d:'1 day'}] },
 
   { cat:'Video & Media', icon:'🖼️', color:'rgba(239,68,68,0.15)',
     title:'YouTube Thumbnail Design',
-    desc:'Click-worthy YouTube thumbnails that boost your CTR. Bold, branded, and designed to stand out in search results.',
-    features:['Custom illustrated thumbnail','Bold text & face cutout','A/B test variant included','High-res PNG (1280x720)','Delivered in 12 hours'],
-    tiers:[{l:'Basic',p:9,d:'1 day'},{l:'Standard',p:19,d:'1 day',pop:true},{l:'Premium',p:35,d:'1 day'}] },
+    desc:'Click-worthy thumbnails that boost your CTR. Bold, branded, and built to stand out.',
+    features:['Custom illustrated thumbnail','Bold text & face cutout','A/B variant included','High-res 1280×720 PNG','Delivered in 12 hours'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:9,d:'1 day',pop:true},{l:'Premium',p:16,d:'1 day'}] },
 
-  // ── CONTENT & SEO ──
+  // CONTENT & SEO
   { cat:'Content & SEO', icon:'✍️', color:'rgba(20,184,166,0.15)',
     title:'Blog Post / Article Writing',
-    desc:'Well-researched, engaging blog posts and articles. SEO-optimised with proper headings, keywords, and meta descriptions.',
-    features:['Keyword research included','SEO headings & structure','Meta title & description','Plagiarism-free content','1000 words per Standard'],
-    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:30,d:'2 days',pop:true},{l:'Premium',p:59,d:'3 days'}] },
+    desc:'Well-researched, SEO-optimised blog posts and articles with proper headings, keywords, and meta descriptions.',
+    features:['Keyword research included','SEO headings & structure','Meta title & description','Plagiarism-free content','1000 words (Standard)'],
+    tiers:[{l:'Basic',p:7,d:'1 day'},{l:'Standard',p:14,d:'1 day',pop:true},{l:'Premium',p:25,d:'2 days'}] },
 
   { cat:'Content & SEO', icon:'🔍', color:'rgba(20,184,166,0.15)',
     title:'SEO Audit & Optimisation',
-    desc:'Full technical and on-page SEO audit. Fix what is holding your site back and get a clear action plan to rank higher.',
+    desc:'Full technical and on-page SEO audit. Fix what is holding your site back and rank higher.',
     features:['Technical SEO audit','On-page optimisation','Keyword gap analysis','Competitor analysis','Priority fix report'],
-    tiers:[{l:'Basic',p:29,d:'2 days'},{l:'Standard',p:69,d:'3 days',pop:true},{l:'Premium',p:149,d:'5 days'}] },
+    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:29,d:'2 days',pop:true},{l:'Premium',p:59,d:'4 days'}] },
 
   { cat:'Content & SEO', icon:'📝', color:'rgba(20,184,166,0.15)',
     title:'Product Description Writing',
     desc:'Persuasive, SEO-friendly product descriptions for your e-commerce store. Converts browsers into buyers.',
-    features:['SEO keyword integration','Benefit-focused copywriting','Amazon / Shopify / WooCommerce ready','Tone matched to your brand','10 products per Standard'],
-    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'3 days'}] },
+    features:['SEO keyword integration','Benefit-focused copywriting','Amazon / Shopify ready','Brand tone matched','10 products (Standard)'],
+    tiers:[{l:'Basic',p:6,d:'1 day'},{l:'Standard',p:12,d:'1 day',pop:true},{l:'Premium',p:22,d:'2 days'}] },
 
   { cat:'Content & SEO', icon:'📧', color:'rgba(20,184,166,0.15)',
     title:'Email Copywriting',
-    desc:'High-converting email sequences, newsletters, and campaigns. Includes subject lines, body copy, and CTAs.',
-    features:['Welcome sequence (3 emails)','Subject line A/B variants','Personalisation tokens','Mobile-optimised HTML','Open rate strategy included'],
-    tiers:[{l:'Basic',p:19,d:'1 day'},{l:'Standard',p:45,d:'2 days',pop:true},{l:'Premium',p:89,d:'4 days'}] },
+    desc:'High-converting email sequences, newsletters, and campaigns with subject lines and CTAs.',
+    features:['Welcome sequence (3 emails)','Subject line A/B variants','Personalisation tokens','Mobile-optimised HTML','Open rate strategy'],
+    tiers:[{l:'Basic',p:9,d:'1 day'},{l:'Standard',p:19,d:'2 days',pop:true},{l:'Premium',p:35,d:'3 days'}] },
 
   { cat:'Content & SEO', icon:'📣', color:'rgba(20,184,166,0.15)',
-    title:'Social Media Content Writing',
-    desc:'Engaging captions, hashtag strategies, and content calendars for Instagram, Facebook, LinkedIn, and Twitter.',
-    features:['Platform-specific tone','Hashtag research','Emojis & CTAs','30 captions per Standard','Scheduled content calendar'],
-    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'2 days',pop:true},{l:'Premium',p:69,d:'4 days'}] },
+    title:'Social Media Captions & Hashtags',
+    desc:'Engaging captions and hashtag strategies for Instagram, Facebook, LinkedIn, and Twitter.',
+    features:['Platform-specific tone','Hashtag research & packs','Emojis & strong CTAs','30 captions (Standard)','Content calendar included'],
+    tiers:[{l:'Basic',p:7,d:'1 day'},{l:'Standard',p:14,d:'2 days',pop:true},{l:'Premium',p:25,d:'3 days'}] },
 
-  // ── DIGITAL MARKETING ──
-  { cat:'Digital Marketing', icon:'📣', color:'rgba(252,211,77,0.1)',
+  // DIGITAL MARKETING
+  { cat:'Digital Marketing', icon:'🔴', color:'rgba(252,211,77,0.1)',
     title:'Google Ads Campaign Setup',
-    desc:'Full Google Ads setup — keyword research, ad copy, bidding strategy, and tracking. Ready to launch and convert.',
+    desc:'Full Google Ads setup — keyword research, ad copy, bidding strategy, and conversion tracking.',
     features:['Keyword research & match types','Ad copy (3 variants)','Conversion tracking setup','Negative keyword list','Campaign structure report'],
-    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'3 days',pop:true},{l:'Premium',p:199,d:'5 days'}] },
+    tiers:[{l:'Basic',p:20,d:'1 day'},{l:'Standard',p:45,d:'3 days',pop:true},{l:'Premium',p:89,d:'5 days'}] },
 
   { cat:'Digital Marketing', icon:'📘', color:'rgba(252,211,77,0.1)',
     title:'Facebook & Instagram Ads',
-    desc:'Meta Ads campaigns that drive real results. Targeting, creatives, copy, and pixel setup all included.',
+    desc:'Meta Ads campaigns that drive real results. Targeting, creatives, copy, and pixel setup.',
     features:['Audience targeting setup','Ad creative design','A/B test variants','Pixel & conversion setup','7-day performance review'],
-    tiers:[{l:'Basic',p:49,d:'2 days'},{l:'Standard',p:99,d:'3 days',pop:true},{l:'Premium',p:199,d:'5 days'}] },
+    tiers:[{l:'Basic',p:20,d:'1 day'},{l:'Standard',p:45,d:'3 days',pop:true},{l:'Premium',p:89,d:'5 days'}] },
 
   { cat:'Digital Marketing', icon:'📱', color:'rgba(252,211,77,0.1)',
     title:'Social Media Management',
-    desc:'Full social media management — content creation, scheduling, engagement, and monthly analytics report.',
-    features:['10 posts per month (Basic)','Hashtag & caption writing','Story / Reel content','Community management','Monthly analytics report'],
-    tiers:[{l:'Basic',p:49,d:'Monthly'},{l:'Standard',p:99,d:'Monthly',pop:true},{l:'Premium',p:199,d:'Monthly'}] },
+    desc:'Full management — content creation, scheduling, engagement, and monthly analytics report.',
+    features:['10 posts per month','Hashtag & caption writing','Story / Reel content','Community management','Monthly analytics report'],
+    tiers:[{l:'Basic',p:25,d:'Monthly'},{l:'Standard',p:49,d:'Monthly',pop:true},{l:'Premium',p:99,d:'Monthly'}] },
 
-  // ── DATA ENTRY ──
+  { cat:'Digital Marketing', icon:'📊', color:'rgba(252,211,77,0.1)',
+    title:'LinkedIn Profile & Outreach',
+    desc:'Optimise your LinkedIn profile and set up outreach sequences to generate leads on autopilot.',
+    features:['Profile headline & summary rewrite','Featured section setup','Connection message templates','Outreach sequence (5 messages)','Weekly tracking sheet'],
+    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'4 days'}] },
+
+  // DATA ENTRY
   { cat:'Data Entry', icon:'⌨️', color:'rgba(99,102,241,0.15)',
     title:'Data Entry & Spreadsheet Work',
-    desc:'Fast, accurate data entry into Excel, Google Sheets, or any platform. Copy-paste, typing, or reformatting — all covered.',
-    features:['Excel / Google Sheets','Accurate & fast entry','Data formatting & cleanup','100 rows per Basic','Delivered as .xlsx or .csv'],
-    tiers:[{l:'Basic',p:10,d:'1 day'},{l:'Standard',p:20,d:'1 day',pop:true},{l:'Premium',p:39,d:'2 days'}] },
+    desc:'Fast, accurate data entry into Excel, Google Sheets, or any platform. Copy-paste, typing, or reformatting.',
+    features:['Excel / Google Sheets','Accurate & fast entry','Data formatting & cleanup','100 rows (Basic)','Delivered as .xlsx or .csv'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:10,d:'1 day',pop:true},{l:'Premium',p:19,d:'2 days'}] },
 
   { cat:'Data Entry', icon:'🔗', color:'rgba(99,102,241,0.15)',
-    title:'Web Research & Lead List',
-    desc:'Targeted research and lead list building. Find emails, contacts, company info, or any data you need from the web.',
-    features:['Verified contact details','Company name, email, phone, LinkedIn','Custom fields as needed','50 leads per Standard','Delivered as .xlsx'],
-    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'3 days'}] },
+    title:'Web Research & Lead List Building',
+    desc:'Targeted research and lead lists. Find emails, contacts, company info, or any web data.',
+    features:['Verified contact details','Company, email, phone, LinkedIn','Custom fields as needed','50 leads (Standard)','Delivered as .xlsx'],
+    tiers:[{l:'Basic',p:6,d:'1 day'},{l:'Standard',p:12,d:'1 day',pop:true},{l:'Premium',p:22,d:'2 days'}] },
 
   { cat:'Data Entry', icon:'📋', color:'rgba(99,102,241,0.15)',
     title:'PDF to Excel / Word Conversion',
     desc:'Convert PDFs, scanned documents, or images into editable Excel, Word, or Google Docs. Fast and accurate.',
-    features:['Accurate data extraction','Tables, text & numbers','Up to 10 pages per Basic','Formatted output','Delivered within 24 hours'],
-    tiers:[{l:'Basic',p:8,d:'1 day'},{l:'Standard',p:18,d:'1 day',pop:true},{l:'Premium',p:35,d:'1 day'}] },
+    features:['Accurate data extraction','Tables, text & numbers','Up to 10 pages (Basic)','Formatted output','Delivered within 24 hours'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:9,d:'1 day',pop:true},{l:'Premium',p:16,d:'1 day'}] },
 
   { cat:'Data Entry', icon:'🛍️', color:'rgba(99,102,241,0.15)',
-    title:'Product Listing (Amazon / Shopify)',
-    desc:'Upload and optimise product listings on Amazon, Shopify, eBay, or Etsy. Images, descriptions, and categories all handled.',
-    features:['Title, description & bullet points','Category & attribute setup','Image upload & alt text','SEO keyword inclusion','10 products per Standard'],
-    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'3 days'}] },
+    title:'Product Listing (Amazon / Shopify / Etsy)',
+    desc:'Upload and optimise product listings on any marketplace. Images, descriptions, and categories handled.',
+    features:['Title, description & bullets','Category & attribute setup','Image upload & alt text','SEO keyword inclusion','10 products (Standard)'],
+    tiers:[{l:'Basic',p:6,d:'1 day'},{l:'Standard',p:12,d:'1 day',pop:true},{l:'Premium',p:22,d:'2 days'}] },
 
-  // ── VIRTUAL ASSISTANT ──
+  { cat:'Data Entry', icon:'🗃️', color:'rgba(99,102,241,0.15)',
+    title:'CRM Data Entry & Cleanup',
+    desc:'Clean, import, and organise your CRM data. HubSpot, Salesforce, Zoho, Airtable — any platform.',
+    features:['Duplicate removal','Data standardisation','Import via CSV / API','Field mapping setup','Error report included'],
+    tiers:[{l:'Basic',p:8,d:'1 day'},{l:'Standard',p:15,d:'1 day',pop:true},{l:'Premium',p:29,d:'2 days'}] },
+
+  // VIRTUAL ASSISTANT
   { cat:'Virtual Assistant', icon:'🗂️', color:'rgba(236,72,153,0.12)',
     title:'Virtual Assistant (General Tasks)',
-    desc:'Reliable virtual assistant for emails, scheduling, research, data entry, travel booking, and admin tasks.',
-    features:['Email management','Calendar & scheduling','Research tasks','Document formatting','2 hours per Basic'],
-    tiers:[{l:'Basic',p:15,d:'1 day'},{l:'Standard',p:35,d:'Ongoing',pop:true},{l:'Premium',p:69,d:'Ongoing'}] },
+    desc:'Reliable VA for emails, scheduling, research, data entry, travel booking, and admin tasks.',
+    features:['Email management','Calendar & scheduling','Research tasks','Document formatting','2 hours (Basic)'],
+    tiers:[{l:'Basic',p:8,d:'1 day'},{l:'Standard',p:18,d:'Ongoing',pop:true},{l:'Premium',p:35,d:'Ongoing'}] },
 
   { cat:'Virtual Assistant', icon:'📞', color:'rgba(236,72,153,0.12)',
     title:'Customer Support Setup',
-    desc:'Set up a complete customer support system — helpdesk, canned responses, FAQ, and escalation workflows.',
+    desc:'Set up a complete customer support system — helpdesk, canned responses, FAQ, and workflows.',
     features:['Helpdesk setup (Freshdesk / Zendesk)','Canned response library','FAQ document creation','Escalation workflow','Staff training guide'],
-    tiers:[{l:'Basic',p:29,d:'2 days'},{l:'Standard',p:59,d:'3 days',pop:true},{l:'Premium',p:119,d:'5 days'}] },
+    tiers:[{l:'Basic',p:12,d:'1 day'},{l:'Standard',p:25,d:'2 days',pop:true},{l:'Premium',p:49,d:'4 days'}] },
 
-  // ── TRANSLATION ──
+  // TRANSLATION
   { cat:'Translation', icon:'🌐', color:'rgba(14,165,233,0.15)',
     title:'Document Translation',
     desc:'Accurate translation of documents, websites, or content. Human-quality output, not just machine translation.',
-    features:['Human + AI assisted','Proofread & edited','500 words per Basic','PDF, Word, or plain text','Languages: EN, HI, AR, FR, ES, DE'],
-    tiers:[{l:'Basic',p:10,d:'1 day'},{l:'Standard',p:20,d:'2 days',pop:true},{l:'Premium',p:39,d:'3 days'}] },
+    features:['Human + AI assisted','Proofread & edited','500 words (Basic)','PDF, Word, or plain text','EN, HI, AR, FR, ES, DE'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:10,d:'1 day',pop:true},{l:'Premium',p:19,d:'2 days'}] },
 
-  // ── AI CONTENT ──
-  { cat:'AI Content', icon:'🤖', color:'rgba(139,92,246,0.12)',
+  // AI CONTENT
+  { cat:'AI Content', icon:'🖼️', color:'rgba(139,92,246,0.12)',
     title:'AI Image Generation & Editing',
-    desc:'Create stunning AI-generated images for your brand, products, or marketing. Midjourney, DALL-E, and Stable Diffusion.',
-    features:['Custom AI image creation','Background removal & editing','Brand colour matching','High-res output (4K)','5 images per Standard'],
-    tiers:[{l:'Basic',p:9,d:'1 day'},{l:'Standard',p:19,d:'1 day',pop:true},{l:'Premium',p:39,d:'2 days'}] },
+    desc:'Stunning AI-generated images for branding, products, or marketing. Midjourney, DALL-E, Stable Diffusion.',
+    features:['Custom AI image creation','Background removal & editing','Brand colour matching','High-res 4K output','5 images (Standard)'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:10,d:'1 day',pop:true},{l:'Premium',p:19,d:'1 day'}] },
 
   { cat:'AI Content', icon:'🎙️', color:'rgba(139,92,246,0.12)',
     title:'AI Voiceover',
-    desc:'Professional AI voiceover in any language or accent. Perfect for videos, ads, explainers, and podcasts.',
-    features:['Natural AI voice synthesis','English, Hindi, Arabic & more','Up to 2 min per Standard','MP3 & WAV output','Background music option'],
-    tiers:[{l:'Basic',p:9,d:'1 day'},{l:'Standard',p:19,d:'1 day',pop:true},{l:'Premium',p:39,d:'2 days'}] },
+    desc:'Professional AI voiceover in any language or accent — videos, ads, explainers, and podcasts.',
+    features:['Natural AI voice synthesis','English, Hindi, Arabic & more','Up to 2 min (Standard)','MP3 & WAV output','Background music option'],
+    tiers:[{l:'Basic',p:5,d:'1 day'},{l:'Standard',p:10,d:'1 day',pop:true},{l:'Premium',p:18,d:'1 day'}] },
 
   { cat:'AI Content', icon:'📄', color:'rgba(139,92,246,0.12)',
     title:'AI Bulk Content Package',
-    desc:'High-volume AI content at scale — blog posts, social captions, ad copy, and email sequences in bulk.',
-    features:['10 blog posts or 50 captions','SEO optimised output','Brand voice fine-tuning','Editable Google Docs','Delivered in 3 days'],
-    tiers:[{l:'Basic',p:19,d:'2 days'},{l:'Standard',p:39,d:'3 days',pop:true},{l:'Premium',p:79,d:'5 days'}] },
+    desc:'High-volume AI content at scale — blog posts, captions, ad copy, and email sequences in bulk.',
+    features:['10 blog posts or 50 captions','SEO optimised output','Brand voice tuning','Editable Google Docs','Delivered in 3 days'],
+    tiers:[{l:'Basic',p:9,d:'2 days'},{l:'Standard',p:19,d:'3 days',pop:true},{l:'Premium',p:35,d:'5 days'}] },
 ];
 
 const categories = ['All', ...new Set(services.map(s => s.cat))];
 
-function renderFilters() {
-  const bar = document.getElementById('filterBar');
-  bar.innerHTML = categories.map(c =>
-    `<button class="filter-btn${c===activeFilter?' active':''}" onclick="setFilter('${c}')">${c}</button>`
-  ).join('');
+function renderFilters(){
+  document.getElementById('filterBar').innerHTML =
+    categories.map(c=>`<button class="filter-btn${c===activeFilter?' active':''}" onclick="setFilter('${c}')">${c}</button>`).join('');
 }
 
-function setFilter(cat) {
+function setFilter(cat){
   activeFilter = cat;
   renderFilters();
   renderServices();
 }
 
-function renderServices() {
-  const filtered = services.filter(s => activeFilter === 'All' || s.cat === activeFilter);
-  document.getElementById('servicesCount').innerHTML =
-    `Showing <span>${filtered.length}</span> of <span>${services.length}</span> services`;
+function selectTier(cardIdx, tierIdx){
+  selected[cardIdx] = tierIdx;
+  // update just that card's tier UI + pay button
+  const card = document.querySelector(`[data-card="${cardIdx}"]`);
+  if(!card) return;
+  const s = filtered()[cardIdx];
+  // update tier buttons
+  card.querySelectorAll('.tier-opt').forEach((b,i)=>{
+    b.classList.toggle('selected', i===tierIdx);
+  });
+  // update summary
+  const t = s.tiers[tierIdx];
+  card.querySelector('.sel-pkg').innerHTML = `Package: <strong>${t.l}</strong> · ${t.d}`;
+  card.querySelector('.sel-price').textContent = fmt(t.p);
+  card.querySelector('.paypal-btn').href =
+    `https://www.paypal.com/paypalme/YOUR_PAYPAL_ID/${Math.round(t.p * rates[currency])}${currency}`;
+}
 
-  const grid = document.getElementById('servicesGrid');
-  grid.innerHTML = filtered.map(s => `
-    <div class="service-card">
+function filtered(){
+  return activeFilter==='All' ? services : services.filter(s=>s.cat===activeFilter);
+}
+
+function renderServices(){
+  const list = filtered();
+  document.getElementById('servicesCount').innerHTML =
+    `Showing <span>${list.length}</span> of <span>${services.length}</span> services`;
+
+  document.getElementById('servicesGrid').innerHTML = list.map((s,i)=>{
+    const sel = (selected[i] !== undefined) ? selected[i] : 1;
+    const t = s.tiers[sel];
+    return `
+    <div class="service-card" data-card="${i}">
       <div class="service-header">
-        <div class="service-icon-row">
-          <div class="service-icon" style="background:${s.color}">${s.icon}</div>
-          <span class="service-category">${s.cat}</span>
+        <div class="svc-icon-row">
+          <div class="svc-icon" style="background:${s.color}">${s.icon}</div>
+          <span class="svc-cat">${s.cat}</span>
         </div>
-        <div class="service-title">${s.title}</div>
-        <div class="service-desc">${s.desc}</div>
+        <div class="svc-title">${s.title}</div>
+        <div class="svc-desc">${s.desc}</div>
       </div>
-      <div class="service-features">
-        ${s.features.map(f=>`<div class="feature-item">${f}</div>`).join('')}
+      <div class="svc-features">
+        ${s.features.map(f=>`<div class="fi">${f}</div>`).join('')}
       </div>
-      <div class="pricing-tiers">
-        ${s.tiers.map(t=>`
-          <div class="tier${t.pop?' popular':''}">
-            ${t.pop?'<div class="tier-popular-badge">POPULAR</div>':''}
-            <div class="tier-label">${t.l}</div>
-            <div class="tier-price">${fmt(t.p)}</div>
-            <div class="tier-delivery">${t.d}</div>
-          </div>`).join('')}
+      <div class="tier-selector">
+        <div class="tier-selector-label">Choose a package</div>
+        <div class="tier-options">
+          ${s.tiers.map((t,ti)=>`
+            <button class="tier-opt${ti===sel?' selected':''}" onclick="selectTier(${i},${ti})">
+              ${t.pop?'<span class="popular-badge">POPULAR</span>':''}
+              <span class="t-name">${t.l}</span>
+              <span class="t-price">${fmt(t.p)}</span>
+              <span class="t-del">${t.d}</span>
+            </button>`).join('')}
+        </div>
       </div>
-      <div class="service-footer">
+      <div class="svc-footer">
+        <div class="selected-summary">
+          <span class="sel-pkg">Package: <strong>${t.l}</strong> · ${t.d}</span>
+          <span class="sel-price">${fmt(t.p)}</span>
+        </div>
         <a class="paypal-btn"
-           href="https://www.paypal.com/paypalme/YOUR_PAYPAL_ID/${Math.round(s.tiers[1].p * rates[currency])}${currency}"
+           href="https://www.paypal.com/paypalme/YOUR_PAYPAL_ID/${Math.round(t.p*rates[currency])}${currency}"
            target="_blank" rel="noopener">
-          🅿 Pay via PayPal &mdash; ${fmt(s.tiers[1].p)} (Standard)
+          🅿 Pay via PayPal
         </a>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
-  // Populate contact select
-  const sel = document.getElementById('contactService');
-  sel.innerHTML = '<option value="">Select a service...</option>' +
+  // populate contact dropdown
+  const sel2 = document.getElementById('contactService');
+  sel2.innerHTML = '<option value="">Select a service...</option>' +
     services.map(s=>`<option>${s.title}</option>`).join('');
 }
 
-function submitForm() {
+function submitForm(){
   const t = document.getElementById('toast');
   t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 3500);
+  setTimeout(()=>t.classList.remove('show'),3500);
 }
 
 renderFilters();
